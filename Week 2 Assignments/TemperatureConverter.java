@@ -13,7 +13,8 @@ public class TemperatureConverter {
             double tempCelsius = scanner.nextDouble();
             double tempFahrenheit = convertCelsiusToFahrenheit(tempCelsius);
             temperatureFahrenheit.add(tempFahrenheit);
-        }
+        scanner.close();
+    }
 
         // Skip the non-numeric input that ends the loop
         scanner.next();

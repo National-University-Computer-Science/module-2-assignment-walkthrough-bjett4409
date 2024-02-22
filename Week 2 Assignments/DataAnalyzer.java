@@ -25,6 +25,7 @@ public class DataAnalyzer {
                     //Error message if the user does not enter four values
                 }
             }
+        scanner.close();
         }
         
         // Calculations are conducted and output if four or fewer values have been entered

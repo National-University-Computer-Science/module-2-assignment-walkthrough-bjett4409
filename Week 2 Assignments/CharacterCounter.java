@@ -16,6 +16,7 @@ public class CharacterCounter {
         // Fill the map with character frequencies
         for (char c : input.toCharArray()) {
             frequencies.put(c, frequencies.getOrDefault(c, 0) + 1);
+        scanner.close();
         }
         
         // Find the maximum frequency
