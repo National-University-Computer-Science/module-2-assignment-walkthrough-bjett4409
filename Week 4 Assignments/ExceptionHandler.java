@@ -8,21 +8,21 @@ public class ExceptionHandler {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Double> values = new ArrayList<>();
 
-        System.out.println("Enter your values. Type 'end' to finish. Warning: Entering more than five values will prompt you to restart the program.");
+        System.out.println("Enter your values. Type 'end' to finish. Warning: Entering more than five values will prompt you to restart the program. ");
 
         while (true) {
             if (values.size() >= 5) {
-                System.out.println("Error: More than five values were entered. Please restart the program.");
+                System.out.println("Error: More than five values were entered. Please restart the program. ");
                 break; // Gracefully exit the program
             }
 
-            System.out.print("Enter a value or 'end' to finish: ");
+            System.out.print("Please enter your five values here: ");
             if (!scanner.hasNextDouble()) {
                 String input = scanner.next();
                 if (input.equalsIgnoreCase("end")) {
                     break; // Exit the loop if 'end' is entered
                 } else {
-                    System.out.println("Invalid input. Please enter a numeric value or 'end' to finish.");
+                    System.out.println("Invalid input. Please enter a numeric value or 'end' to finish. ");
                     continue; // Skip the rest of the loop and prompt again
                 }
             }
@@ -31,7 +31,7 @@ public class ExceptionHandler {
                 double value = scanner.nextDouble();
                 values.add(value);
             } catch (InputMismatchException e) {
-                System.out.println("Please enter a valid numeric value.");
+                System.out.println("Please enter a valid numeric value. ");
                 scanner.next(); // Consume the invalid input to avoid infinite loop
             }
         }
@@ -48,7 +48,7 @@ public class ExceptionHandler {
             System.out.println("Largest Value: " + max);
             System.out.println("The Range: " + range);
         } else {
-            System.out.println("No valid entries were entered or not enough values were provided.");
+            System.out.println("No valid entries were entered or not enough values were provided. ");
         }
     }
 }
